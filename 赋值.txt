@@ -1,0 +1,14 @@
+var relative = {
+		dad: 'ys',
+		mom: 'wei'
+};
+
+var user = {
+	name: 'lipeng',
+	age: 16,
+	family: relative
+};
+
+
+
+console.log(user.family.mom);

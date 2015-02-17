@@ -1,0 +1,26 @@
+http://www.jonathan-petitcolas.com/2014/11/27/creating-json-web-token-in-javascript.html
+http://www.intridea.com/blog/2013/11/7/json-web-token-the-useful-little-standard-you-haven-t-heard-about
+
+Client application                                            API
+    --------                                              -----------
+        |                                                      |
+        |                   GET /api/employees                 |
+        |----------------------------------------------------->|
+        |                     403 Forbidden                    |
+        |<-----------------------------------------------------| 
+        |                                                      |
+        |                                                      |
+        |                 POST /api/authenticate               |
+        |     { login: "john.doe", password: "password" }      |
+        |----------------------------------------------------->|
+        |                      200 Success                     |
+        |             { token: "my.personal.token" }           |
+        |<-----------------------------------------------------|
+        |                                                      |
+        |                                                      |
+        |                 GET /api/employees                   |
+        | Header { "Authorization: Token "my.personal.token" } |
+        |----------------------------------------------------->|
+        |                      200 Success                     |
+        |<-----------------------------------------------------| 
+        |                                                      |
